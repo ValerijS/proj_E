@@ -1,0 +1,31 @@
+-//<!DOCTYPE html>
+html(lang="en")
+head
+  title Bootstrap Tiles
+  meta(charset="utf-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1")
+  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+  
+body
+  p Hello #{sess_em1}
+  p(id= 'k1')
+    div(class="container-fluid")         
+      div(class="row")
+         -var i = 0
+         each school in schools     
+           div(class="col-sm-4")           
+             div(style="display:inline-block; width: 350px; height: 175px; margin: 10px; border: 3px solid #73AD21; background-color:lavenderblush;")
+               -var j = 0 
+               each val, index in school
+                -j++
+                 span <br> #{index}
+                  input(type='text', name= index, id=i, tile= i,  onchange="onChange(event, this)", value= val, , onclick= "onClick_28_08(event,this)", style="background-color:lavender;")
+              
+  div(class='floating-box',  onclick= "onClick1(event,this)") click here to put new school
+span <br>
+span <br>
+a(href="/logout") Logout
+script(src="/JavaScript/event_handler.js")            
+

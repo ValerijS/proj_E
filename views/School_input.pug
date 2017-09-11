@@ -1,0 +1,9 @@
+table(style = {width: "100%"})
+ tr
+  each val, index in columns
+   th #{val}
+ each school in schools
+  tr
+   each val, index in school
+    td
+     input(type='text', name='index', id='index', value= val) 

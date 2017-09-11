@@ -1,0 +1,22 @@
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+style .floating-box {display:inline-block; width: 350px; height: 175px; margin: 10px; border: 3px solid #73AD21;}
+p Hello #{sess_em1}
+p(id= 'k1')
+-var i = 0
+each school in schools
+ -i++
+  div(class='floating-box') Click on id to delete school
+   -var j = 0 
+    each val, index in school
+     -j++
+      span <br> #{index}
+       input(type='text', name= index, id=i, tile= i,  onchange="onChange(event, this)", value= val, , onclick= "onClick_28_08(event,this)")
+   button(id= i, numb= school.nameOrNumber, onclick= "onClick_11_08(event,this)") 'pupils'     
+div(class='floating-box',  onclick= "onClick1(event,this)") click here to put new school
+span <br>
+span <br>
+a(href="/logout") Logout
+script(src="/JavaScript/event_handler.js")
+ 
+
+

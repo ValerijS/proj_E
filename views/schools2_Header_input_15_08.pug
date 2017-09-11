@@ -1,0 +1,13 @@
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+p
+table(style = {width: "100%"})
+ tr
+  each val, index in columns
+   th #{val}
+    input(type='radio', name= 'order', value = val, onclick= "onClick_order_15_08(event,this)") 
+   
+ each school in schools
+  tr
+   each val in school
+    td #{val} 
+script(src="JavaScript/schoolInput1_15_08.js")    

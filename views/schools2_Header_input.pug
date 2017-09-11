@@ -1,0 +1,13 @@
+table(style = {width: "100%"})
+ tr
+  form(action="http://127.0.0.1:8081/process_get", method="POST")
+   each val, index in columns
+    th #{index}
+     input(type='radio', name= 'order', value = index, onclick= "onClick_order_11_08(event,this)") 
+   th
+    button SUBMIT
+ each school in schools
+  tr
+   each val in school
+    td #{val}    
+      

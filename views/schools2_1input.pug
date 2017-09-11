@@ -1,0 +1,14 @@
+table(style = {width: "100%"})
+ tr
+  each val, index in columns
+   th #{index}
+ each school in schools
+  tr
+   form(action="http://127.0.0.1:8081/updata_school_number_of_pupl", method="POST")
+    each val, index in school
+     td     
+      input(type='text', name= index, id= index,  onchange="onChange()", value= val)
+    td
+     button SUBMIT
+
+script(src="JavaScript/schoolInput.js")
